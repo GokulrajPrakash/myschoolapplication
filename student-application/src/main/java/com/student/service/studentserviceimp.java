@@ -1,13 +1,29 @@
 package com.student.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.student.entity.Student;
+import com.student.repository.StudentRepository;
 
-public class studentserviceimp implements studentservice1 {
+@Service
 
+public class studentserviceimp implements StudentService1 {
+
+	
+	
 	@Override
 	public String saveStudent(Student student) {
-		// TODO Auto-generated method stub
-		return null;
+			
+		if(student != null)
+		{
+			return "student is saved successfully";
+		}
+		else
+		{
+			return "student is not saved";
+		}
+	
 	}
 
 }
